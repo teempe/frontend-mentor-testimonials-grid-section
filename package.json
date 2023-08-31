@@ -1,0 +1,16 @@
+{
+  "name": "frontend-mentor-testimonials-grid-section",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - Testimonials grid section solution",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "compile:sass": "sass sass/main.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "teempe",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}
