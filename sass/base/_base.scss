@@ -1,4 +1,11 @@
+:root {
+    --ff-base: 'Barlow Semi Condensed', sans-serif;
 
+    --fw-regular: 500;
+    --fw-bold: 600;
+
+    --color-body-bg: #ECF2F8;
+}
 
 // Breakpoints
 // $bp-tablet: 48em; // 768px
@@ -16,15 +23,18 @@ img {
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
 }
 
 body {
-    overflow-x: hidden;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    background-color: var(--color-body-bg);
 
     // center content on page
     display: grid;
     justify-content: center;
-    align-content: start;
+    align-content: center;
     min-height: 100vh;
 }
