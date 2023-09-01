@@ -1,8 +1,35 @@
 @import 'review-card';
 
-.section-reviews {
+.reviews {
     display: grid;
+    grid-template-columns: 32.7rem;
+    grid-template-rows: 44.4rem repeat(4, min-content);
     row-gap: 2.4rem;
 
     padding: 7.1rem 2.4rem;
+
+    &__1 {
+        background-color: var(--color-card-moderate-violet);
+        color: var(--color-card-white);
+    }
+
+    &__2 {
+        background-color: var(--color-card-very-dark-grayish-blue);
+        color: var(--color-card-white);
+    }
+
+    &__3 {
+        background-color: var(--color-card-white);
+        color: var(--color-card-very-dark-grayish-blue);
+    }
+
+    &__4 {
+        background-color: var(--color-card-very-dark-blackish-blue);
+        color: var(--color-card-light-grayish-blue);
+    }
+
+    &__5 {
+        background-color: var(--color-card-white);
+        color: var(--color-card-very-dark-grayish-blue);
+    }
 }

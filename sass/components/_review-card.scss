@@ -1,11 +1,12 @@
 .review-card {
-    background-color: white;
     border-radius: 0.8rem;
     padding: 2.6rem 3.2rem 3.2rem;
 
     display: flex;
     flex-direction: column;
     row-gap: 1.8rem;
+
+    box-shadow: 4rem 6rem 5rem -4.7rem var(--color-card-shadow);
 
     &__header {
         display: flex;
@@ -17,6 +18,10 @@
         width: 2.8rem;
         height: 2.8rem;
         border-radius: 50%;
+
+        &--border {
+            border: 2px solid var(--color-card-avatar-border);
+        }
     }
 
     &__author-data {
@@ -36,10 +41,13 @@
     }
 
     &__content {
+        flex: 1 0 auto;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         row-gap: 1.6rem;
-    }
+        z-index: 2;
+    };
 
     &__heading {
         font-size: 2rem;
@@ -49,5 +57,19 @@
 
     &__review {
         opacity: 0.7;
+    }
+
+    &--quotation {
+        position: relative;    
+
+        &::before {
+            content: "";
+            width: 10.4rem;
+            height: 10.2rem;
+            background: url('../images/bg-pattern-quotation.svg');
+            position: absolute;
+            right: 2.4rem;
+            top: 0;    
+        }
     }
 }

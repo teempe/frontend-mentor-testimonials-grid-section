@@ -3,6 +3,13 @@
   --fw-regular: 500;
   --fw-bold: 600;
   --color-body-bg: #ECF2F8;
+  --color-card-moderate-violet: #733FC8;
+  --color-card-very-dark-grayish-blue: #48556A;
+  --color-card-very-dark-blackish-blue: #19202D;
+  --color-card-light-grayish-blue: #ECF2F8;
+  --color-card-white: #FFF;
+  --color-card-avatar-border: #A775F1;
+  --color-card-shadow: #48556A40;
 }
 
 * {
@@ -32,12 +39,12 @@ body {
 }
 
 .review-card {
-  background-color: white;
   border-radius: 0.8rem;
   padding: 2.6rem 3.2rem 3.2rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.8rem;
+  box-shadow: 4rem 6rem 5rem -4.7rem var(--color-card-shadow);
 }
 .review-card__header {
   display: flex;
@@ -48,6 +55,9 @@ body {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
+}
+.review-card__author-avatar--border {
+  border: 2px solid var(--color-card-avatar-border);
 }
 .review-card__author-data {
   display: flex;
@@ -63,9 +73,12 @@ body {
   opacity: 0.5;
 }
 .review-card__content {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   row-gap: 1.6rem;
+  z-index: 2;
 }
 .review-card__heading {
   font-size: 2rem;
@@ -75,11 +88,45 @@ body {
 .review-card__review {
   opacity: 0.7;
 }
+.review-card--quotation {
+  position: relative;
+}
+.review-card--quotation::before {
+  content: "";
+  width: 10.4rem;
+  height: 10.2rem;
+  background: url("../images/bg-pattern-quotation.svg");
+  position: absolute;
+  right: 2.4rem;
+  top: 0;
+}
 
-.section-reviews {
+.reviews {
   display: grid;
+  grid-template-columns: 32.7rem;
+  grid-template-rows: 44.4rem repeat(4, min-content);
   row-gap: 2.4rem;
   padding: 7.1rem 2.4rem;
+}
+.reviews__1 {
+  background-color: var(--color-card-moderate-violet);
+  color: var(--color-card-white);
+}
+.reviews__2 {
+  background-color: var(--color-card-very-dark-grayish-blue);
+  color: var(--color-card-white);
+}
+.reviews__3 {
+  background-color: var(--color-card-white);
+  color: var(--color-card-very-dark-grayish-blue);
+}
+.reviews__4 {
+  background-color: var(--color-card-very-dark-blackish-blue);
+  color: var(--color-card-light-grayish-blue);
+}
+.reviews__5 {
+  background-color: var(--color-card-white);
+  color: var(--color-card-very-dark-grayish-blue);
 }
 
 /*# sourceMappingURL=style.css.map */
