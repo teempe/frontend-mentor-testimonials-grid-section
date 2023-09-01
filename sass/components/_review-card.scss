@@ -69,7 +69,11 @@
             background: url('../images/bg-pattern-quotation.svg');
             position: absolute;
             right: 2.4rem;
-            top: 0;    
+            top: 0;
+            
+            @include media-screen-min($bp-desktop) {
+                right: 8rem;
+            }
         }
     }
 }

@@ -32,4 +32,38 @@
         background-color: var(--color-card-white);
         color: var(--color-card-very-dark-grayish-blue);
     }
+
+    @include media-screen-min($bp-desktop) {
+        grid-template-columns: 25.5rem 1fr 25.5rem 25.5rem;
+        grid-template-rows: 28.2rem 26.6rem;
+        row-gap: 2.4rem;
+        column-gap: 3rem;
+
+        padding: 16.4rem 16.5rem;
+
+        &__1 {
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+
+        &__2 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+
+        &__3 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+
+        &__4 {
+            grid-row: 2/3;
+            grid-column: 2/4;
+        }
+
+        &__5 {
+            grid-row: 1/3;
+            grid-column: 4/5;
+        }
+    }
 }
